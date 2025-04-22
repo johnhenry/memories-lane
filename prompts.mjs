@@ -101,7 +101,7 @@ ${
   // TOML front matter generation
   let tomlFrontMatter = `\n\nInclude the following TOML front matter:
 
----toml
+---
 [conversation]
 type = "${projectType}"`;
   // Add custom fields to TOML
@@ -231,6 +231,25 @@ export const pick_up = [
           // instruct model to use the 'continue_from' tool with the provided id
           text: `# Conversation Continuation Instructions
 You are tasked with continuing a conversation based on previously saved instructions. Retrieve previous context by using the 'pick_up' using the id: ${id}.`,
+        },
+      },
+    ],
+  }),
+];
+
+export const resume = [
+  "🔄 Resume", // name of the prompt
+  "Prompt to load latest context and to continue working with it.", // description of the prompt
+  {}, // tool schema
+  () => ({
+    messages: [
+      {
+        role: "user",
+        content: {
+          type: "text",
+          // instruct model to use the 'continue_from' tool with the provided id
+          text: `# Conversation Continuation Instructions
+You are tasked with continuing a conversation based the most recently saved instructions using the 'load_latest_context_item' tool.`,
         },
       },
     ],
