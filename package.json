@@ -1,0 +1,29 @@
+{
+  "name": "mcp-server-template",
+  "version": "0.0.0",
+  "main": "index.mjs",
+  "description": "An MCP server template",
+  "homepage": "https://github.com/johnhenry/mcp-server-template",
+  "author": "John Henry <john@iamjohnhenry.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mcp-server-template": "./stdio.mjs"
+  },
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "server",
+    "sample",
+    "example",
+    "template"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.1",
+    "vimble": "^0.0.0",
+    "zod": "^3.24.3"
+  },
+  "port": 8080
+}
