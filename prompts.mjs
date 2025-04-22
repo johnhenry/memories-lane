@@ -32,9 +32,9 @@ once you have created this summary, please save it using the 'leave_off' tool so
  * Generates a conversation summary prompt based on project type and options
  * @param {Object} options - Configuration options
  * @param {string} options.projectType - Type of project (technical, creative, problem-solving, or general)
- * @param {boolean} options.includeMermaid - Whether to include Mermaid diagram instructions
- * @param {boolean} options.includeCode - Whether to include code block instructions
- * @param {boolean} options.includeTasks - Whether to include task tracking instructions
+ * @param {string} options.includeMermaid - Whether to include Mermaid diagram instructions
+ * @param {string} options.includeCode - Whether to include code block instructions
+ * @param {string} options.includeTasks - Whether to include task tracking instructions
  * @param {Object} options.customFields - Additional custom fields for TOML front matter
  * @returns {string} - The generated prompt
  */

@@ -13,13 +13,13 @@ export const leaveOff = [
   "leave_off", // name of the tool
   "Save context and instructions for another LLM to continue task.", // description of the tool
   {
-    instructions: z.string().describe("Content to save"), // tool schema
+    context: z.string().describe("Content to save"), // tool schema
   },
-  async ({ instructions }) => {
-    const trimmedInstructions = instructions.trim();
-    if (!trimmedInstructions) {
+  async ({ context }) => {
+    const trimmedContext = context.trim();
+    if (!trimmedContext) {
       return {
-        content: [{ type: "text", text: "No instructions provided" }],
+        content: [{ type: "text", text: "No context provided" }],
         success: false,
       };
     }
@@ -28,9 +28,9 @@ export const leaveOff = [
     const id = [crypto.randomUUID().split("-")[0], new Date().toISOString()]
       .join("@")
       .replaceAll(":", "_");
-    writeFile(id, trimmedInstructions);
+    writeFile(id, trimmedContext);
     try {
-      const text = `instructions saved under id: ${id}`;
+      const text = `context saved under id: ${id}`;
       return {
         content: [{ type: "text", text }],
         success: true,
