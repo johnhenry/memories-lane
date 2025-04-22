@@ -1,5 +1,5 @@
 {
-  "name": "memory-lane",
+  "name": "memories-lane",
   "version": "0.0.0",
   "main": "stdio.mjs",
   "description": "An MCP for moving context between LLM chats",

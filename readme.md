@@ -1,4 +1,4 @@
-# Memory Lane
+# Memories Lane
 
 A flexible MCP server designed to facilitate sharing conversation context across different interactions with Large Language Models (LLMs).
 
