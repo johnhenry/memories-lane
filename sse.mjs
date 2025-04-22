@@ -2,7 +2,7 @@ import http from "node:http";
 import { URL } from "node:url";
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.mjs";
 import pack from "./package.json" with { type: "json" };
-import { log } from "./utility.mjs";
+import { log } from "./utility/index.mjs";
 import server from "./index.mjs";
 
 // Store transports for each session type

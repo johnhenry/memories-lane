@@ -3,7 +3,7 @@ import {
   McpServer,
 } from "@modelcontextprotocol/sdk/server/mcp.js";
 import pack from "./package.json" with { type: "json" };
-import { log } from "./utility.mjs";
+import { log, handleError } from "./utility/index.mjs";
 
 // Create an MCP server with more detailed information
 const server = new McpServer({
@@ -11,22 +11,6 @@ const server = new McpServer({
   version: pack.version,
   description: pack.description,
 });
-
-// Error handling utility
-const handleError = (error) => {
-  const message = error instanceof Error 
-    ? error.message
-    : String(error);
-  
-  log('Error:', message);
-
-  return {
-    content:[{ type: "text", text: `Error: ${message}`}],
-    error: message,
-    success: false
-  }
-};
-
 
 import * as tools from "./tools.mjs";
 Object.values(tools).forEach(([name, description, inputSchema, handler]) => {

@@ -1,15 +1,15 @@
 {
-  "name": "mcp-server-template",
+  "name": "continue-mcp",
   "version": "0.0.0",
   "main": "index.mjs",
-  "description": "An MCP server template",
-  "homepage": "https://github.com/johnhenry/mcp-server-template",
+  "description": "An MCP for moving context between LLM chats",
+  "homepage": "https://github.com/johnhenry/continue-mcp",
   "author": "John Henry <john@iamjohnhenry.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "mcp-server-template": "./stdio.mjs"
+    "continue-mcp": "./stdio.mjs"
   },
   "type": "module",
   "keywords": [
@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.1",
+    "truish": "^0.0.0",
     "vimble": "^0.0.0",
     "zod": "^3.24.3"
   },

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import server from "./index.mjs";
-import { log } from "./utility.mjs";
+import { log } from "./utility/index.mjs";
 import pack from "./package.json" with { type: "json" };
 // Handle unexpected errors
 process.on("uncaughtException", (error) => {
