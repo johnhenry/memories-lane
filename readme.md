@@ -1,5 +1,7 @@
 # Memories Lane
 
+> Previously published on npm as `memories-lane` (unscoped). That name is no longer updated; use `@johnhenry/memories-lane`.
+
 A flexible MCP server designed to facilitate sharing conversation context across different interactions with Large Language Models (LLMs).
 
 ## Features
@@ -95,9 +97,9 @@ Integrate into your MCP client configuration:
 ```json
 {
   "mcpServers": {
-    "vimble-mcp": {
+    "memories-lane": {
       "command": "npx",
-      "args": ["-y", "memory-lane", "<path-to-context-storage>"]
+      "args": ["-y", "@johnhenry/memories-lane", "<path-to-context-storage>"]
     }
   }
 }
@@ -108,7 +110,7 @@ Integrate into your MCP client configuration:
 ```json
 {
   "mcpServers": {
-    "vimble-mcp": {
+    "memories-lane": {
       "command": "<path-to-node>",
       "args": ["<this-directory>/stdio.mjs", "<path-to-context-storage>"]
     }
